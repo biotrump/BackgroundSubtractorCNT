@@ -66,6 +66,9 @@ int main( int argc, char** argv )
         cout << "Could not initialize capturing...\n";
         return 0;
     }
+	//1024*768
+	cap.set(CV_CAP_PROP_FRAME_WIDTH, 1920 );
+	cap.set(CV_CAP_PROP_FRAME_HEIGHT,1080);
 
     Ptr<BackgroundSubtractor> pBgSub;
     if (type == "CNT")
